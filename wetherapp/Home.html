@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+   
+    <title>Weather App</title>
+</head>
+
+<body>
+    
+    <div class="box">
+    <div class="wave-first"></div>
+    <div class="wave-second"></div>
+    <div class="wave-third"></div>
+    <div id="wether-condition">
+        <i class="fa-solid fa-sun fa-xl" id="fa-sun" style="scale: 350%;" ></i>
+        wether{%weather%}
+    </div>
+    <div class="wether_info">
+        <h1 class="location"><i class="fa-solid fa-street-view fa-flip fa-2xs" id="street" style="color: #f4f3f7; scale: 200%; margin-right: 20px;"></i>Delhi</h1>
+        <P id="date" style="font-size: 20px; font-weight: bold;">WED | Oct 23 | 10:25</P>
+        <h1 class="temperature">temp {%temp%}</h1>
+        <h3 class="temmin_max">Max{%maxtemp%} | Min{%mintemp%}</h3>
+    </div>
+</div>
+
+</body>
+<script>
+    let now = new Date();
+    const arr=now.toString();
+    let arr1=arr.substring(0,25);
+    console.log(arr1)
+    const date=document.getElementById("date");
+    date.innerHTML=arr1;
+    
+</script>
+</html>
